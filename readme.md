@@ -55,6 +55,18 @@ Notice "-t 0.0.0.0:2244..." above. By default wstunnel binds to localhost which 
 
 For tunneling over strict firewalls: WebSocket is a part of the HTML5 standard, any reasonable firewall will unlikely be so strict as to break HTML5.
 
+## Heroku setup
+
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://heroku.com/deploy)
+- Click on the deploy on heroku button above
+  - Set a name for the app and click on deploy app
+
+- Wait for Heroku to start the app, then run the client
+```shell
+npm install wstunnel -g
+wstunnel ws://your-app.herokuapp.com:80
+```
+
 ### SSL setup
 
 Currently wstunnel in server mode supports plain tcp socket only. For SSL support (highly recommended), setup a NGINX reverse proxy.
